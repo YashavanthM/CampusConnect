@@ -1,0 +1,42 @@
+.faculty-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.back-btn {
+  padding: 8px 15px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.title {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.faculty-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.faculty-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+}
+
+.faculty-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.faculty-card p {
+  margin: 4px 0;
+  color: #333;
+}

@@ -1,0 +1,192 @@
+/* Dashboard.css */
+
+/* --- Overall Layout --- */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8f9fa; /* Light grey background for the main area */
+}
+
+/* --- SIDEBAR (Left Panel) --- */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand span {
+  color: #ff6b00; /* Orange accent for the lightning bolt */
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  color: #64748b;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-item:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.nav-item.active {
+  background-color: #e0e7ff; /* Light blue active state */
+  color: #3b82f6; /* Blue text for active state */
+}
+
+/* --- MAIN CONTENT (Right Panel) --- */
+.main-content {
+  flex: 1;
+  padding: 50px;
+  overflow-y: auto;
+}
+
+/* Header Section */
+.header-welcome {
+  margin-bottom: 40px;
+}
+
+.header-welcome h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-welcome p {
+  color: #94a3b8;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* --- Bento Grid Layout --- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* --- Base Card Styling --- */
+.bento-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+/* Card Typography */
+.bento-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1e293b;
+}
+
+.bento-card p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* --- Icon Boxes (The colored squares) --- */
+.card-icon-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+/* --- Specific Card Styles --- */
+
+/* Notes (Blue) */
+.card-notes .card-icon-box { background: #dbeafe; color: #2563eb; }
+
+/* Announcements (Red/Orange) */
+.card-announcements .card-icon-box { background: #ffe4e6; color: #e11d48; }
+
+/* Faculty (Green) */
+.card-faculty .card-icon-box { background: #dcfce7; color: #16a34a; }
+
+/* Profile (Grey) */
+.card-profile .card-icon-box { background: #f1f5f9; color: #475569; }
+
+/* --- FEATURED AI CARD (The Purple One) --- */
+.card-ai {
+  /* Spans 2 columns if space allows, making it look wider like in the image */
+  grid-column: span 2; 
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+}
+
+/* Override text colors for the AI card */
+.card-ai h3 { color: white; }
+.card-ai p { color: rgba(255, 255, 255, 0.9); }
+
+.card-ai .card-icon-box {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  color: #ffffff;
+}
+
+/* --- Responsive Tweak --- */
+@media (max-width: 1024px) {
+    .card-ai { grid-column: span 1; } /* On smaller screens, it becomes a normal card */
+}
+@media (max-width: 768px) {
+  .dashboard-layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; padding: 20px; position: relative; }
+  .main-content { padding: 30px 20px; }
+  .brand { margin-bottom: 20px; }
+}
