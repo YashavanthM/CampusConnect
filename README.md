@@ -1,11 +1,17 @@
 Maintained by group 10
 
 \- Vikas HK(4PS24IS056)
+
 \- Yashwanth HS(4PS24IS057)
+
 \- Yashavanth M(4PS25IS408)
+
 \- Gangadhar SP(4PS25IS402)
+
 \- Harsha KM(4PS24IS060)
+
 \- Yashaswini SG(4PS24IS057)
+
 \- Aishwarya N(4PS24IS059)
 
 
