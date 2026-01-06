@@ -1,3 +1,5 @@
+Maintained by Yashavanth M
+
 \# CampusConnect 🚀
 
 
