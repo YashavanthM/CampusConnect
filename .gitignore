@@ -1,17 +1,27 @@
+# =========================
 # Python
+# =========================
 __pycache__/
 *.pyc
 .env
 venv/
+.venv/
 
-# Node
+# =========================
+# Node / React
+# =========================
 node_modules/
 
+# =========================
 # ChromaDB / Vector DB
+# =========================
 chroma_db/
 *.bin
 *.sqlite3
 
-# OS files
+# =========================
+# OS / Editor files
+# =========================
 .DS_Store
 Thumbs.db
+.vscode/
