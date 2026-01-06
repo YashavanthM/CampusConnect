@@ -1,4 +1,4 @@
-Maintained by group 10
+Developed by Group 10
 
 \- Vikas HK(4PS24IS056)
 
