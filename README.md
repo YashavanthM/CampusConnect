@@ -2,7 +2,7 @@ Developed by Group 10
 
 \- Vikas HK(4PS24IS056)
 
-\- Yashwanth HS(4PS24IS057)
+\- Yashwanth HS(4PS24IS058)
 
 \- Yashavanth M(4PS25IS408)
 
